@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <% if(success && success.length > 0){ %>
+            <div class="flash-success"><%= success[0]  %></div>
+        <% } %>
+    <% if(error && error.length > 0){ %>
+            <div class="flash-error"><%= error[0] %></div>
+        <% } %>
+        
+    <h1>Sign Up</h1>
+    <form method="post" action="/signup">
+         <div class="signupbox">
+        <label for="username" class="username">Username</label>
+        <input name="username" class="newform" type="text" id="username" placeholder="Enter Username"><br><br>
+    
+        <label for="password" class="password">Password</label>
+        <input name="password" class="newform" type="password" id="password" placeholder="Enter password"><br><br>
+        <button class="newbtn">Submit</button>
+        
+    </div>
+    </form>
+    <div>
+        <p class="noAccount">
+    Already have an account&nbsp;
+    <a style="color:aquamarine" href="/login">Login in</a>
+    </p>
+    </div>
+    
+</body>
+</html>

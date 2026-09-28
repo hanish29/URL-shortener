@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <form method="post" action="/form">
+        <h1>Enter Your Url</h1>
+        <% if(success && success.length > 0){ %>
+            <div class="flash-success"><%= success[0]  %></div>
+            <% } %>
+            <% if(error && error.length > 0){ %>
+            <div class="flash-error"><%= error[0] %></div>
+            <% } %>
+        <input type="text" name="url" id="url" class="newform"><br>
+        <button class="newbtn">Get link</button>
+    </form>
+    
+</body>
+</html>

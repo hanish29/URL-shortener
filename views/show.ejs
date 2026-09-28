@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Link</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Your Url</h1>
+
+<div class="content">
+<div class="code">
+    <% if(url.code) { %>
+    <h3>Short Url : <a href="/<%= url.code %>"><span class="urlspan"><%= url.code %></span></a>
+    <button class="copy" data-code="<%= url.code %>">Copy</button>
+    </h3>
+    <div class="click">
+        <h4>Total Clicks : <%= url.clicks %></h4>
+    </div>
+    
+    <% } %>
+
+
+</div>
+        <div class="btns">
+            <form method="get" action="/edit/<%= url._id %>">
+        <button class="edit">Edit</button>
+    </form>
+    <form method="post" action="/url.srt/<%= url._id %>?_method=DELETE">
+        <button class="delete">Delete</button>
+    </form>
+    <form method="get" action="/qr/<%= url.code %>">
+        <button class="qr-btn">QR Code</button>
+    </form>
+        </div>
+</div>
+
+</body>
+</html>

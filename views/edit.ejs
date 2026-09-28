@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Edit Your Url</h1>
+    <% if(success && success.length > 0){ %>
+            <div class="flash-success"><%= success[0]  %></div>
+            <% } %>
+            <% if(error && error.length > 0){ %>
+            <div class="flash-error"><%= error[0] %></div>
+            <% } %>
+    <form method="post" action="/edit/<%= url._id %>?_method=PUT">
+        <textarea name="link" class="newform"><%= url.url %></textarea><br><br><br>
+        <button class="edit">Edit</button>
+    </form>
+    
+</body>
+</html>

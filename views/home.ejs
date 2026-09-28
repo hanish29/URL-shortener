@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <% let c = 1; %>
+    <div class="body">
+        
+        <div class="navbar">
+             <div class="Searchbox">
+            <a href="/form"><button class="geturl newbtn">Get your Short Url</button></a>
+            <form method="get" action="/url.srt">
+                <input name="Search" class="searchform" type="text" placeholder="Search your Urls">
+                <button class="searchbtn">Search</button>
+            </form>
+    </div>
+    <% if(!currUser){ %>
+        <a href="/login">
+                <button class="login" >Login</button>
+            </a>
+            <a  href="/signup">
+                <button class="signup">Sign Up</button>
+            </a>
+        <% }else{ %>
+            <a  href="/logout">
+                <button class="signup">Logout</button>
+            </a>
+            <% } %>
+        </div>
+        <% if(success && success.length > 0){ %>
+            <div class="flash-success"><%= success[0]  %></div>
+            <% } %>
+            <% if(error && error.length > 0){ %>
+            <div class="flash-error"><%= error[0] %></div>
+            <% } %>
+           
+
+    <% for(let url of urls) { %>
+        <div class="content">
+            <div class="url">
+                <h3 >(<%= c++ %>)&nbsp;&nbsp; Your URL : <span ><%= url.url %></span></h3>
+            </div>
+
+            <div class="code">
+                <% if(url.code) { %>
+                <h3>Code : <a href="/<%= url.code %>"><span class="urlspan"><%= url.code %></span></a>
+                <button class="copy" data-code="<%= url.code %>">Copy</button>
+                </h3>
+                <% } %>
+                
+            </div>
+            <h4>Total Clicks : <%= url.clicks %></h4>
+                    <div class="btns">
+                        <form method="get" action="/edit/<%= url._id %>">
+                    <button class="edit">Edit</button>
+                </form>
+                <form method="post" action="/url.srt/<%= url._id %>?_method=DELETE">
+                    <button class="delete">Delete</button>
+                </form>
+                <form method="get" action="/qr/<%= url.code %>">
+                    <button class="qr-btn">QR Code</button>
+                </form>
+                    </div>
+                    <div class="date">
+                        <h5>Created at <%= url.date.toLocaleString('en-IN') %></h5>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    
+    </div>
+</body>
+</html>
+<script>
+    const links = document.querySelectorAll("a");
+    const btns = document.querySelectorAll(".copy");
+
+
+    for(let btn of btns){
+        btn.addEventListener("click",()=>{
+            const code = btn.dataset.code;
+            const shortUrl = `${window.location.origin}/${code}`;
+            navigator.clipboard.writeText(shortUrl);
+            btn.textContent = "Copied!";
+
+setTimeout(() => {
+    btn.textContent = "Copy";
+}, 1500);
+        })
+    }
+</script>

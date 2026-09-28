@@ -1,0 +1,282 @@
+span{
+    color: red;
+}
+
+.urlspan:hover{
+    text-decoration:underline;
+}
+
+h1{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #210a0a;
+    color: white;
+    width: 50% ;
+    margin: auto;
+    height: 100px;
+    box-shadow: 2px 2px 10px black;
+}
+.getUrl{
+    height: 50px;
+    width: 200px;
+    font-size: large ;
+}
+
+body{
+    background-color: #DDD0C8;
+    color: black;
+    text-align: center;
+    font-size: x-large;
+}
+
+/* .btns{
+    position: absolute;
+    bottom: 0;
+} */
+
+
+a{
+    text-decoration:none;
+}
+
+.newform{
+    width: 500px;
+    height: 50px;
+    margin-top: 1rem;
+    font-size:xx-large ;
+}
+.newbtn{
+    height: 50px;
+    width: 150px;
+    font-size:x-large;
+    margin-top: 3rem;
+    background: red;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10%;
+}
+
+.newbtn:hover{
+    background: yellow;
+    color: black;
+}
+
+.content{
+    margin-bottom: 1rem;
+    background:rgb(176, 172, 172);
+    margin-bottom: 4rem; 
+    font-size: 2rem;
+    width: 1000px;  
+    margin: auto;
+    height: 700px;
+    border-radius:25px 25px 0 0 ;
+}
+
+.content:hover{
+    box-shadow: 2px 2px 10px black;
+}
+
+.edit , .delete{
+    width: 100px;
+    height: 40px;
+    font-size:x-large;
+    margin-bottom: 10px;
+    background: rgb(108, 231, 248);
+    color: rgb(1, 0, 0);
+    border: 1px solid black;
+    border-radius: 20px;    
+
+}
+
+.edit:hover , .delete:hover{
+    box-shadow:2px 2px 10px rgb(7, 69, 43);
+    background:  rgb(0, 255, 200);
+    color: black;
+}
+
+.geturl{
+    font-size: x-large ;
+    height: 50px;
+    width: 260px;
+}
+
+.url{
+    word-break:break-all;
+}
+
+.copy{
+    background-color: rgb(3, 209, 255);
+    width: 100px;
+    height: 50px;
+    font-size:20px;
+    margin-left: 15px;
+    border-radius: 20px;
+}
+
+.copy:hover{
+    box-shadow:2px 2px 10px rgb(7, 69, 43);
+    background:  rgb(0, 255, 200);
+    color: black;
+}
+
+.flash-success{
+     background-color: #00ff3c;
+    border: 1px solid #c3e6cb;
+    padding: 12px;
+    margin: 15px 0;
+    height: 50px;
+    width: 50%;
+    margin: auto;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size:40px;
+
+}
+
+.flash-error{
+    background-color: red;
+    border: 1px solid #c3e6cb;
+    padding: 12px;
+    margin: 15px 0;
+    height: 50px;
+    width: 50%;
+    margin: auto;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size:40px;
+
+}
+
+.qr-img{
+    height: 300px;
+    width: 300px;
+}
+
+.qr-btn{
+    width: 130px;
+    height: 40px;
+    font-size:20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    background: rgb(1, 255, 200);
+    cursor:pointer;
+}
+.qr-btn:hover{
+    background: #e7e73a;
+    box-shadow: 1px 1px  7px #000;
+}
+
+.Searchbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.searchform{
+    margin-left: 60px;
+    width: 300px;
+    height: 50px;
+    font-size:30px;
+}
+.searchbtn{
+    height: 50px;
+    width: 150px;
+    font-size:x-large;
+    margin-top: 3rem;
+    background: red;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.searchbtn:hover{
+    background: yellow;
+    color: black;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(255, 2, 221, 0.18);
+    /* position: absolute; */
+    /* margin: auto; */
+}
+
+.signup{
+        margin-left: 50px;
+        position: absolute;
+        right: 40px;
+        width: 120px;
+        height: 40px;
+        font-size: 25px;
+        background: red;
+        border-radius: 20px;
+        color: white;
+    }
+    
+.login{
+        color: white;
+        margin-left: 50px;
+        position: absolute;
+        right: 210px;
+        width: 90px;
+        height: 40px;
+        font-size: 25px;
+        background: red;
+        border-radius: 20px;
+}
+
+.login:hover , .signup:hover {
+    background: yellow;
+    color: black;
+    box-shadow: 1px 1px 5px #000;
+}
+
+
+
+.signupbox{
+    background: #65dce497;
+    height: 500px;
+    width: 50%;
+    margin: auto;
+    margin-top: 70px;
+    border-radius: 20px;
+}
+
+.newform{
+    border: 1px solid #000;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.username , .email , .password{
+    font-size:30px;
+}
+
+button{
+    border: 1px solid #000 !important;
+}
+button:hover{
+    box-shadow: 1px 1px 10px #000;
+}
+
+.noAccount{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 70px;
+    margin: auto;
+    align-content: center;
+    margin-top: 100px;
+    padding-top: 40px;
+    background: rgb(106, 165, 243);
+    color: white;
+    font-size: 30px;
+}

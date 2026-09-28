@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<link rel="stylesheet" href="/css/style.css">
+<body>
+     <h1>Login</h1>
+     <% if(error  && error.length > 0){ %>
+            <div class="flash-error"><%= error[0]  %></div>
+            <% } %>
+    <form method="post" action="/login">
+         <div class="signupbox">
+        <label for="username" class="username">Username</label>
+        <input name="username" class="newform" type="text" id="username" placeholder="Enter Username"><br><br>
+        <label for="password" class="password">Password</label>
+        <input name="password" class="newform" type="password" id="password" placeholder="Enter password"><br><br>
+        <button class="newbtn">Login</button>
+        
+    </div>
+    </form>
+
+    <div>
+        <p class="noAccount">
+    Don't have an account?
+    <a style="color:aquamarine" href="/signup">Sign up</a>
+    </p>
+    </div>
+    
+</body>
+</html>
